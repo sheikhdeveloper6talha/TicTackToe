@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background: linear-gradient(90deg , skyblue , rgb(166, 166, 249));
+}
+h1{
+    margin: 10px;
+    padding: 10px;
+}
+.gameContainer{
+  display: grid; 
+  grid-template-columns: repeat(3, 100px); 
+  justify-content: center; 
+  align-content: center;
+}
+.gameContainer .cells{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+border-right: 1px solid rgb(9, 1, 1);
+border-bottom: 1px solid rgb(11, 3, 3);
+font-weight: 900;
+font-size: 20px;
+}
+
+.gameContainer .cells:nth-child(7),
+.gameContainer .cells:nth-child(8),
+.gameContainer .cells:nth-child(9){
+    border-bottom: 1px solid transparent;
+}
+.gameContainer .cells:nth-child(3),
+.gameContainer .cells:nth-child(6),
+.gameContainer .cells:nth-child(9){
+border-right: 1px solid transparent;
+}
+
+#footer{
+display: flex;
+flex-direction: column;
+}
+#footer h1{
+    font-size: 20px;
+}
+#footer button{
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: linear-gradient(45deg , red, orange);
+    font-weight: 800;
+    color: #fff;
+    border-radius: 10px;
+transition: all ease-in-out 2s;
+
+}
+
+#footer button:hover{
+ background: linear-gradient(45deg , orange, red);
+}
